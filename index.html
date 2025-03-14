@@ -5,8 +5,6 @@
 <h1>Answer Check</h1>
 
 <input type = "number" id = "answerBox" name = "answer" style = "height: 30px; width: 250px; font-size: 25px" oninput = "checkAnswer()">
-<p id = "debug"></p>
-<p id = "debug_output"></p>
 <p><img src = "omori-aubrey.gif" id = "fooled_1" style = "display:block"></p>
 <p><img src = "chicago-pd-hailey-upton.gif" id = "fooled_2" style = "display:block"></p>
 <p><img src = "you-did-it-willy-wonka-and-the-chocolate-factory.gif" id = "congrats" style = "display:block"></p>
@@ -14,15 +12,12 @@
 <script>
 	function checkAnswer(){
     	let ans = document.getElementById("answerBox").value;
-	document.getElementById("debug").innerHTML = "You answered: " + ans;
         if (ans == 584923716){
-		document.getElementById("debug_output").innerHTML = "get fooled";
 		document.getElementById("fooled_1").style.display = "block";
 		document.getElementById("fooled_2").style.display = "block";
 		document.getElementById("congrats").style.display = "none";
         }
 	else if (ans == 651384927){
-		document.getElementById("debug_output").innerHTML = "hurray";
 		document.getElementById("fooled_1").style.display = "none";
 		document.getElementById("fooled_2").style.display = "none";
 		document.getElementById("congrats").style.display = "block";
