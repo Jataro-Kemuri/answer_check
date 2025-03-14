@@ -5,6 +5,7 @@
 <h1>Answer Check</h1>
 
 <input type = "number" id = "answerBox" name = "answer" style = "height: 30px; width: 250px; font-size: 25px" oninput = "checkAnswer()">
+<p id = "debug"></p>
 <p><img src = "omori-aubrey.gif" id = "fooled_1" style = "display:none"></p>
 <p><img src = "chicago-pd-hailey-upton.gif" id = "fooled_2" style = "display:none"></p>
 <p><img src = "you-did-it-willy-wonka-and-the-chocolate-factory.gif" id = "congrats" style = "display:none"></p>
@@ -12,6 +13,7 @@
 <script>
 	function checkAnswer(){
     	let ans = document.getElementById("answerBox").value;
+	document.getElementById("debug").innerHTML = hashCode(ans)
         if (ans == 584923716){
 		document.getElementById("fooled_1").style.display = "block";
 		document.getElementById("fooled_2").style.display = "block";
@@ -27,6 +29,16 @@
 		document.getElementById("fooled_2").style.display = "none";
 		document.getElementById("congrats").style.display = "none";
 		
+	}
+
+	function hashCode(str) {
+   		let hash = 0;
+    		for (let i = 0, len = str.length; i < len; i++) {
+        		let chr = str.charCodeAt(i);
+        		hash = (hash << 5) - hash + chr;
+        		hash |= 0; // Convert to 32bit integer
+    		}
+    		return hash;
 	}
     }
 </script>
