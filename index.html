@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Answer Check</h1>
+
+<input type = "number"
+	   id = "answerBox" 
+       name = "answer"
+       style = "height: 30px;
+       			width: 250px;
+                font-size: 25px"
+       oninput = "checkAnswer()">
+     
+<div class="tenor-gif-embed" 
+	 data-postid="4559766" 
+     data-share-method="host" 
+     data-aspect-ratio="1.22" 
+     data-width="100%"
+     id="fooled"
+     style="display:none">
+     
+	<a href="https://tenor.com/view/megamind-trapped-trap-funny-villain-gif-4559766">Megamind Trapped GIF</a>from <a href="https://tenor.com/search/megamind-gifs">Megamind GIFs</a>
+    
+</div>
+
+<script type="text/javascript" async src="https://tenor.com/embed.js">
+	function checkAnswer(){
+    	let ans = document.getElementById("answerBox").value;
+        if (ans == 584923716){
+        	document.getElementById("fooled").style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
