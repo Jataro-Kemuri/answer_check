@@ -4,25 +4,22 @@
 
 <h1>Answer Check</h1>
 
-<input type = "number"
-	   id = "answerBox" 
-       name = "answer"
-       style = "height: 30px; width: 250px; font-size: 25px"
-       oninput = "checkAnswer()">
+<input type = "number" id = "answerBox" name = "answer" style = "height: 30px; width: 250px; font-size: 25px" oninput = "checkAnswer()">
+<p id = "debug"></p>
 <p><img src = "omori-aubrey.gif" id = "fooled_1" style = "display:none"></p>
-
 <p><img src = "chicago-pd-hailey-upton.gif" id = "fooled_2" style = "display:none"></p>
 <p><img src = "you-did-it-willy-wonka-and-the-chocolate-factory.gif" id = "congrats" style = "display:none"></p>
 	
-<script type="text/javascript" async src="https://tenor.com/embed.js">
+<script>
 	function checkAnswer(){
     	let ans = document.getElementById("answerBox").value;
-        if (ans == 584923716){
+	document.getElementById("debug").innerHTML = "You wrote: " + ans;
+        if (ans === 584923716){
 		document.getElementById(fooled_1).style.display = "block";
 		document.getElementById(fooled_2).style.display = "block";
 		doucment.getElementById(congrats).style.display = "none";
         }
-	else if{ans == 651384927){
+	else if (ans === 651384927){
 		document.getElementById(fooled_1).style.display = "none";
 		document.getElementById(fooled_2).style.display = "none";
 		doucment.getElementById(congrats).style.display = "block";
