@@ -16,15 +16,15 @@
     	let ans = document.getElementById("answerBox").value;
 	document.getElementById("debug").innerHTML = "You wrote: " + ans;
         if (ans == 584923716){
-		document.getElementById(fooled_1).style.display = "block";
-		document.getElementById(fooled_2).style.display = "block";
-		doucment.getElementById(congrats).style.display = "none";
+		document.getElementById(fooled_1).style = "display: block";
+		document.getElementById(fooled_2).style = "display: block";
+		doucment.getElementById(congrats).style = "display: none";
 		document.getElementById("debug_output").innerHTML = "get fooled";
         }
 	else if (ans == 651384927){
-		document.getElementById(fooled_1).style.display = "none";
-		document.getElementById(fooled_2).style.display = "none";
-		doucment.getElementById(congrats).style.display = "block";
+		document.getElementById(fooled_1).style.display = "display: none";
+		document.getElementById(fooled_2).style.display = "display: none";
+		doucment.getElementById(congrats).style.display = "display: block";
 		document.getElementById("debug_output").innerHTML = "hurray";
 	}
 		
