@@ -12,14 +12,13 @@
 	
 <script>
 	function checkAnswer(){
-    	let ans = document.getElementById("answerBox").value;
-	document.getElementById("debug").innerHTML = hashCode(ans)
-        if (ans == 584923716){
+    	let ans_hash = hashCode(document.getElementById("answerBox").value);
+        if (ans_hash == -1907512493){
 		document.getElementById("fooled_1").style.display = "block";
 		document.getElementById("fooled_2").style.display = "block";
 		document.getElementById("congrats").style.display = "none";
         }
-	else if (ans == 651384927){
+	else if (ans_hash == 1112790849){
 		document.getElementById("fooled_1").style.display = "none";
 		document.getElementById("fooled_2").style.display = "none";
 		document.getElementById("congrats").style.display = "block";
